@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML ASSIGNMENT 3</title>
+</head>
+<body>
+   <form #form="ngForm" class="form-group" (ngSubmit)="onSubmit()">
+
+       <p><label for="firstName">First Name:</label><br>
+       <input type= "text" id="firstName" name="fname" [(ngModel)]="formData.fname" class="form-control"></p>
+
+       <p><label for="lastName">Last Name:</label><br>
+       <input type= "text" id="lastName" name ="lname" [(ngModel)]="formData.lname" class="form-control"></p>
+
+       <p><label for="email">Email:</label><br>
+       <input type="email" id="email" name="email" [(ngModel)]="formData.email" class="form-control"></p>
+
+       <p><label for="contact">Contact Number:</label><br>
+       <input type="tel" id="contact" name="contact" [(ngModel)]="formData.contact" class="form-control"></p>
+
+       <p><label for="address">Address:</label><br>
+       <textarea id="address" rows="3" cols="22" name="address" [(ngModel)]="formData.address" class="form-control">
+       </textarea></p>
+
+       <p><label for="username">Username:</label><br>
+       <input type="text" id="username" name="uname" [(ngModel)]="formData.uname" class="form-control"></p>
+
+       <p><label for="psw">Password:</label><br>
+       <input type="password" id="psw" name="pwd" [(ngModel)]="formData.pwd" class="form-control"></p>
+
+       <p><label>Gender:</label><br>
+       <input type="radio" id="male" name="gender" value="male" [(ngModel)]="formData.gender" class="form-control"/>
+       <label for="male">Male</label>
+       <br>
+       <input type="radio" id="female" name="gender" value="female" [(ngModel)]="formData.gender" class="form-control"/>
+       <label for="female">Female</label></p>
+
+       <p><label for="qualification">Qualification:</label><br>
+       <select id="qualification" class="form-control">
+           <option value="selectQ" selected>--Select--</option>
+           <option value="MTech">M.Tech</option>
+           <option value="BTech">B.Tech</option>
+           <option value="BE">B.E.</option>
+           <option value="BCA">BCA</option>
+           <option value="Diploma">Diploma</option>
+       </select></p>
+
+       <p><label for="exp">Experience:</label><br>
+       <select id="exp" class="form-control">
+           <option value="selectExp" selected>--Select--</option>
+           <option value="zero">Less Than 0</option>
+           <option value="one">0-1</option>
+           <option value="three">3-5</option>
+           <option value="five">5 or more</option>
+        </select></p>
+
+    <p><label>Coding Languages:</label><br>
+       <input type="checkbox" id="cpp" name="cpp" value="C++" class="form-control">
+       <label for ="cpp">C/C++</label>
+       <br>
+       <input type="checkbox" id="java" name="java" value="Java" class="form-control">
+       <label for ="java">Java</label>
+       <br>
+       <input type="checkbox" id="cs" name="cs" value="C#" class="form-control">
+       <label for ="cs">C#</label>
+       <br>
+       <input type="checkbox" id="php" name="php" value="PHP" class="form-control">
+       <label for ="php">PHP</label>
+       <br>
+       <input type="checkbox" id="py" name="py" value="Python" class="form-control">
+       <label for ="py">Python</label></p><br>
+
+
+
+   <button type="submit" id="submit">Submit</button>
+
+    </form>
+</body>
+</html>
